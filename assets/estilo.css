@@ -35,6 +35,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 76px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -44,7 +45,7 @@ body {
   font-family: var(--texto);
   font-size: 16px;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ---------- capas de fondo (como la maqueta original: oscuro / claro / rojo) ---------- */
@@ -600,7 +601,7 @@ button { cursor: pointer; }
   .encabezado { position: sticky; }
   .hero-media { margin-top: 26px; }
   .hero-foto { margin-inline: calc(50% - 50vw); }
-  .hero-foto-barra { inset: 14px -8px -14px 8px; }
+  .hero-foto-barra { inset: 14px 0 -14px 8px; }
   .hero-foto-marco {
     border-width: 4px;
     border-radius: 0;
