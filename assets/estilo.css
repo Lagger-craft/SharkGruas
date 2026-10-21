@@ -287,6 +287,9 @@ button { cursor: pointer; }
   background: var(--blanco);
   color: var(--tinta);
 }
+/* la seccion que sigue a la cinta se acerca un poco mas */
+.cinta-confianza + .seccion { padding-top: 30px; }
+
 .cinta-confianza ul {
   list-style: none; margin: 0; padding: 0;
   display: grid; grid-template-columns: repeat(2, 1fr);
@@ -301,7 +304,7 @@ button { cursor: pointer; }
 .cinta-confianza small { display: block; font-size: 11px; color: var(--tinta-2); margin-top: 2px; }
 
 /* ---------- secciones ---------- */
-.seccion { padding: 54px 0; }
+.seccion { padding: 46px 0; }
 .seccion-alterna { background: var(--negro-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -680,7 +683,10 @@ button { cursor: pointer; }
   .tel-grande svg { width: 24px; height: 24px; }
   .seccion { padding: 78px 0; }
   .servicios { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .cinta-confianza ul { grid-template-columns: repeat(4, 1fr); }
+  /* la seccion que sigue a la cinta se acerca un poco mas */
+.cinta-confianza + .seccion { padding-top: 30px; }
+
+.cinta-confianza ul { grid-template-columns: repeat(4, 1fr); }
   .cinta-confianza li { border-bottom: 0; padding: 22px 18px; }
   .cinta-confianza li:nth-child(2n) { border-right: 1px solid var(--linea); }
   .cinta-confianza li:last-child { border-right: 0; }
@@ -785,6 +791,9 @@ main { animation: aparecer .4s ease-out both; }
 .hero-sub { animation: subir .6s .16s ease-out both; }
 .hero-acciones { animation: subir .6s .2s ease-out both; }
 .hero-foto { animation: subir .7s .1s ease-out both; }
+/* la seccion que sigue a la cinta se acerca un poco mas */
+.cinta-confianza + .seccion { padding-top: 30px; }
+
 .cinta-confianza ul { animation: subir .6s .26s ease-out both; }
 
 .js [data-reveal] {
@@ -795,28 +804,39 @@ main { animation: aparecer .4s ease-out both; }
 .js [data-reveal].visible { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  main, .hero-eyebrow, .hero h1, .hero-lead, .hero-sub, .hero-acciones, .hero-foto, .cinta-confianza ul { animation: none; }
+  main, .hero-eyebrow, .hero h1, .hero-lead, .hero-sub, .hero-acciones, .hero-foto, /* la seccion que sigue a la cinta se acerca un poco mas */
+.cinta-confianza + .seccion { padding-top: 30px; }
+
+.cinta-confianza ul { animation: none; }
   .js [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
 
 /* ---------- carrusel de tarjetas ---------- */
 .carrusel { position: relative; margin-top: 26px; }
 .carrusel-pista {
+  --ancho-tarjeta: 84%;
+  --margen-carrusel: 8%;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 86%;
+  grid-auto-columns: var(--ancho-tarjeta);
   gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--margen-carrusel);
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 2px;
+  padding: 0 var(--margen-carrusel) 2px;
 }
+/* la tarjeta activa queda al centro, asomando la misma medida a cada lado */
+.carrusel-pista > * { scroll-snap-align: center; }
 .carrusel-pista::-webkit-scrollbar { display: none; }
-.carrusel-pista > * { scroll-snap-align: start; }
 
 @media (min-width: 640px) {
-  .carrusel-pista { grid-auto-columns: calc((100% - 12px) / 2); }
+  .carrusel-pista {
+    --ancho-tarjeta: 46%;
+    --margen-carrusel: 3%;
+    grid-auto-columns: calc((100% - 12px) / 2);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -827,6 +847,8 @@ main { animation: aparecer .4s ease-out both; }
     grid-auto-columns: auto;
     gap: 16px;
     overflow: visible;
+    padding: 0;
+    scroll-padding-inline: 0;
   }
   .carrusel-pista--2 { --cols: 2; }
   .carrusel-pista--3 { --cols: 3; }
