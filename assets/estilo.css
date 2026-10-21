@@ -814,29 +814,22 @@ main { animation: aparecer .4s ease-out both; }
 /* ---------- carrusel de tarjetas ---------- */
 .carrusel { position: relative; margin-top: 26px; }
 .carrusel-pista {
-  --ancho-tarjeta: 84%;
-  --margen-carrusel: 8%;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: var(--ancho-tarjeta);
+  grid-auto-columns: 86%;
   gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-padding-inline: var(--margen-carrusel);
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 0 var(--margen-carrusel) 2px;
+  padding-bottom: 2px;
 }
-/* la tarjeta activa queda al centro, asomando la misma medida a cada lado */
-.carrusel-pista > * { scroll-snap-align: center; }
+/* alineado al mismo margen que el resto de la pagina */
+.carrusel-pista > * { scroll-snap-align: start; }
 .carrusel-pista::-webkit-scrollbar { display: none; }
 
 @media (min-width: 640px) {
-  .carrusel-pista {
-    --ancho-tarjeta: 46%;
-    --margen-carrusel: 3%;
-    grid-auto-columns: calc((100% - 12px) / 2);
-  }
+  .carrusel-pista { grid-auto-columns: calc((100% - 12px) / 2); }
 }
 
 @media (min-width: 1024px) {
@@ -847,8 +840,6 @@ main { animation: aparecer .4s ease-out both; }
     grid-auto-columns: auto;
     gap: 16px;
     overflow: visible;
-    padding: 0;
-    scroll-padding-inline: 0;
   }
   .carrusel-pista--2 { --cols: 2; }
   .carrusel-pista--3 { --cols: 3; }
