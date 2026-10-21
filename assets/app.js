@@ -328,6 +328,7 @@ function initReferidos() {
   });
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
   initContacto();
   initCotizador();
