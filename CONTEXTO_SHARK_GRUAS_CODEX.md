@@ -6,19 +6,19 @@ Desarrollar un sitio web profesional para **Shark Grúas**, empresa de servicios
 Este archivo es el contexto funcional inicial para Codex. **No inventar tarifas, reglas comerciales, credenciales, datos de contacto, textos legales ni compromisos operativos** que no hayan sido confirmados.
 
 ## 2. Decisiones ya tomadas
-- **Cobertura confirmada por el responsable del proyecto:** base operativa en la Región Metropolitana y servicios de traslado desde La Serena hasta Chillán. El mapa regional destaca las regiones de ese recorrido; no equivale a confirmar cobertura completa de todas las localidades de cada región.
-- Habrá **dos páginas públicas principales**: **Inicio** (`/`) y **Cotizador** (`/cotizar`).
-- El **cotizador no irá embebido en la página principal**. La página de Inicio sí tendrá botones visibles para acceder a él.
+- **Cobertura vigente según la última devolución del cliente (2026-10):** solo **Santiago y Región Metropolitana**, con base operativa en la zona centro. El material original (PPT) declaraba alcance desde La Serena hasta Chillán; esa cobertura **no se publica** en la maqueta actual. El mapa regional se mantiene como referencia del país y no implica cobertura completa de todas las localidades de cada región.
+- Páginas públicas: **Inicio** (`/`), **Servicios**, **Cotizador** (`/cotizacion.html`), **Cobertura**, **Preguntas frecuentes** y **Club de referidos**.
+- El **cotizador no va embebido en la página principal**: es la página propia `cotizacion.html`, con botones visibles desde la portada y el encabezado.
 - La portada se centrará en **presentación de la empresa, servicios, cobertura, preguntas frecuentes y contacto**.
 - La **cotización es automática**: se debe calcular una tarifa a partir de reglas del negocio, aún pendientes de definir.
-- El **club de referidos queda fuera del alcance por ahora**, aunque aparezca en la presentación original.
+- El **club de referidos queda fuera del alcance del MVP**, aunque aparezca en la presentación original. El cliente pidió un botón flotante de descuento que lleve a esa página, así que la maqueta la incluye como página aparte.
 - El **panel administrativo se considera una etapa posterior**, no parte del MVP inicial.
 - Tecnologías previstas: **Next.js**, **Vercel**, **Supabase** y **n8n**.
 
 ## 3. Información de negocio de la presentación entregada
 Según el material proporcionado por Shark Grúas (PPT SHARK GRÚAS):
 - Base operativa principal en la **Región Metropolitana**.
-- Cobertura declarada desde **La Serena hasta Chillán**, con detalle de comunas en las preguntas frecuentes del material.
+- Cobertura original del material: desde **La Serena hasta Chillán**. Vigente a la fecha: **solo Santiago y la Región Metropolitana**, con el detalle de comunas por sector en la página de cobertura.
 - Atención declarada **24 horas, los 365 días del año**.
 - Transportan automóviles, SUV, camionetas, furgones, camiones livianos y diversos tipos de maquinaria industrial o agrícola; también describen capacidad para vehículos pesados.
 - Ofrecen traslados de emergencia y servicios programados.

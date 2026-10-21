@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Club de referidos | Shark Grúas | Shark Grúas</title>
+<meta name="description" content="Club de referidos de Shark Grúas: deriva servicios, cobra sin complicaciones y gana comisiones y descuentos permanentes para tus clientes.">
+<meta name="theme-color" content="#0d0d0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="salto" href="#contenido">Ir al contenido</a>
+
+
+  <header class="encabezado">
+    <div class="wrap encabezado-inner">
+      <a class="marca" href="index.html" aria-label="Shark Grúas, inicio">
+        <span class="marca-logo">
+          <img src="Media/Logo_sin_fondo.png" alt="Shark Grúas — Servicios Automotrices" width="54" height="54">
+        </span>
+        <span class="marca-texto">
+          <strong>SHARK GRÚAS</strong>
+          <small>Servicios automotrices</small>
+        </span>
+      </a>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <a href="servicios.html">Servicios</a>
+        <a href="cobertura.html">Cobertura</a>
+        <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+        <a class="boton" href="cotizacion.html">Cotizar ahora <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-principal">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+<main id="contenido">
+
+<section class="interior">
+    <div class="wrap">
+      <a class="tel-grande" data-telefono-link href="tel:+56912345678">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.2 1l-2.3 2.1z"/></svg>
+        <span>
+          <small>Llámanos 24/7</small>
+          <strong data-telefono>+56 9 1234 5678</strong>
+        </span>
+      </a>
+      <p class="migas"><a href="index.html">Inicio</a> / Club de referidos</p>
+      <span class="eyebrow">Club de referidos</span>
+      <h1>Deriva servicios.<br><em>Gana en cada viaje.</em></h1>
+      <p class="seccion-intro">Tu cliente sigue siendo tuyo. Shark Grúas se ocupa del traslado, tú cobras directo y sumas una comisión por cada servicio referido.</p>
+    </div>
+  </section>
+
+  <section class="seccion fondo-paper claro" style="padding-top:26px">
+    <div class="wrap">
+      <div class="referidos-tarjetas">
+        <article class="referido-card">
+          <b>01 / Comisión</b>
+          <h3>Comisión por cada servicio</h3>
+          <p>Referidos un traslado y sumas tu comisión. El valor se define al momento del alta, por volumen y tipo de servicio.</p>
+        </article>
+        <article class="referido-card">
+          <b>02 / Descuento</b>
+          <h3>Descuento permanente para tus clientes</h3>
+          <p>Cada referido accede a un descuento permanente en sus traslados mientras mantenga su inscripción activa.</p>
+        </article>
+        <article class="referido-card">
+          <b>03 / Soporte</b>
+          <h3>Acompañamiento directo</h3>
+          <p>Una persona de contacto para tus cotizaciones, no un formulario lost in an email. Respondemos rápido.</p>
+        </article>
+      </div>
+
+      <div class="formulario-referidos">
+        <h3>Postula al club</h3>
+        <p class="seccion-intro">Completa tus datos y te contactamos para activar tu referido. En esta maqueta el formulario no envía información.</p>
+        <form id="form-referidos">
+          <div class="campo-par">
+            <div class="campo">
+              <span>Nombre y apellido</span>
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="campo">
+              <span>Teléfono</span>
+              <input type="tel" name="telefono" placeholder="+56 9 0000 0000" required>
+            </div>
+          </div>
+          <div class="campo-par">
+            <div class="campo">
+              <span>Correo</span>
+              <input type="email" name="correo" placeholder="tucorreo@empresa.cl" required>
+            </div>
+            <div class="campo">
+              <span>Empresa o rubro</span>
+              <input type="text" name="empresa" placeholder="Taller, automotor, flotas…">
+            </div>
+          </div>
+          <div class="campo">
+            <span>Servicios que derivas</span>
+            <select name="servicios">
+              <option>Traslados de vehículos livianos</option>
+              <option>Maquinaria y equipos industriales</option>
+              <option>Vehículos pesados</option>
+              <option>Emergencias en ruta</option>
+            </select>
+          </div>
+          <button class="boton boton-bloque" type="submit" style="margin-top:18px">Postular al club <span aria-hidden="true">↗</span></button>
+          <p class="resultado-nota" id="estado-referidos" role="status"></p>
+        </form>
+      </div>
+
+      <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="boton" href="index.html#cotizar">Cotizar un traslado <span aria-hidden="true">↗</span></a>
+        <a class="boton boton-linea" data-whatsapp href="https://wa.me/56912345678" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="wrap">
+    <div class="pie-marca">
+      <a class="marca-logo" href="index.html" aria-label="Shark Grúas, inicio">
+        <img src="Media/Logo_sin_fondo.png" alt="" width="68" height="68">
+      </a>
+      <div class="marca-texto">
+        <strong>SHARK GRÚAS</strong>
+        <small>Servicios automotrices</small>
+      </div>
+    </div>
+    <div class="pie-columnas">
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a data-telefono-link href="tel:+56912345678"><span data-telefono>+56 9 1234 5678</span></a></li>
+          <li><a data-whatsapp href="https://wa.me/56912345678" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="club-referidos.html">Club de referidos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Servicio</h4>
+        <ul>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="cotizacion.html">Cotizador</a></li>
+          <li><a href="cobertura.html">Cobertura</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="index.html">Volver al inicio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie-legal">
+      <span>© <span id="anio">2026</span> SHARK GRÚAS · Santiago, Chile</span>
+      <span>Maqueta visual · No genera cotizaciones reales</span>
+    </div>
+  </div>
+</footer>
+
+<div class="flotantes">
+  <a class="flotante-descuento" href="club-referidos.html">
+    <span class="etiqueta">-10%</span> Club de referidos
+  </a>
+  <a class="flotante-wa" data-whatsapp href="https://wa.me/56912345678" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.4 1.7 6.3L3 29l6.9-1.7c1.8 1 3.9 1.5 6.1 1.5 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.7c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.1 1 1.1-4-.3-.4c-1-1.6-1.6-3.6-1.6-5.6 0-5.9 4.8-10.7 10.8-10.7 5.9 0 10.7 4.8 10.7 10.7S21.9 26.7 16 26.7zm6-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.9-.8-3.1-2.7-3.2-3.1-.1-.4.6-1.3.8-1.7.2-.3 0-.5 0-.7l-.7-1.6c-.2-.4-.4-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-1.2 1.3-1.2 3.2 0 5 1.3 1.9 2.8 3.1 4.3 3.5.6.3 1.1.4 1.4.5.6.2 1.1.1 1.5-.1.5-.2 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+  </a>
+</div>
+
+<script src="assets/app.js"></script>
+<script src="assets/animaciones.js"></script>
+</body>
+</html>
